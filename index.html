@@ -3,7 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JS projects</title>
+    <meta name="title" content="JS-projects by JhonLatte">
+    <meta name="description" content="projects website">
+    <meta name="keywords" content="html, css, js, javascript, project,">
+    <meta property="og:url" content="https://github.com/JhonLatte/JS-projects/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="JS-projects BY JhonLatte">
+    <meta property="og:description" content="projects website">
+    <meta property="og:image"
+        content="https://cdn-images.threadless.com/threadless-media/artist_shops/shops/techmasters/products/601471/shirt-1528585184-26927ce1a12d99a4def37673630af819.png?v=3&d=eyJvbmx5X21ldGEiOiBmYWxzZSwgImZvcmNlIjogZmFsc2UsICJvcHMiOiBbWyJ0cmltIiwgW2ZhbHNlLCBmYWxzZV0sIHt9XSwgWyJyZXNpemUiLCBbXSwgeyJ3aWR0aCI6IDk5Ni4wLCAiYWxsb3dfdXAiOiBmYWxzZSwgImhlaWdodCI6IDk5Ni4wfV0sIFsiY2FudmFzX2NlbnRlcmVkIiwgWzEyMDAsIDEyMDBdLCB7ImJhY2tncm91bmQiOiAiMzUzODQ3In1dLCBbInJlc2l6ZSIsIFsyMDAwXSwge31dLCBbImNhbnZhc19jZW50ZXJlZCIsIFsyMDAwLCAyMDAwLCAiI2ZmZmZmZiJdLCB7fV0sIFsiZW5jb2RlIiwgWyJqcGciLCA4NV0sIHt9XV19">
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:type" content="website">
+        <meta property="twitter:title" content="JS-projects by JhonLatte">
+        <meta property="twitter:description" content="projects website">
+        <meta property="twitter:image"
+        content="https://cdn-images.threadless.com/threadless-media/artist_shops/shops/techmasters/products/601471/shirt-1528585184-26927ce1a12d99a4def37673630af819.png?v=3&d=eyJvbmx5X21ldGEiOiBmYWxzZSwgImZvcmNlIjogZmFsc2UsICJvcHMiOiBbWyJ0cmltIiwgW2ZhbHNlLCBmYWxzZV0sIHt9XSwgWyJyZXNpemUiLCBbXSwgeyJ3aWR0aCI6IDk5Ni4wLCAiYWxsb3dfdXAiOiBmYWxzZSwgImhlaWdodCI6IDk5Ni4wfV0sIFsiY2FudmFzX2NlbnRlcmVkIiwgWzEyMDAsIDEyMDBdLCB7ImJhY2tncm91bmQiOiAiMzUzODQ3In1dLCBbInJlc2l6ZSIsIFsyMDAwXSwge31dLCBbImNhbnZhc19jZW50ZXJlZCIsIFsyMDAwLCAyMDAwLCAiI2ZmZmZmZiJdLCB7fV0sIFsiZW5jb2RlIiwgWyJqcGciLCA4NV0sIHt9XV19">
+        <link rel="shortcut icon" href="./assets/images/html-css-js.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/styles/style.css">
     <link rel="stylesheet" href="./assets/styles/responsive.css">
 </head>
@@ -54,13 +70,13 @@
 
 <section class="GuessTheNumber" >
 <h1 id="finum">გამოიცანი რიცხვი</h1>
-<p >შეიყვანეთ მნიშვნელობა 1-დან 100-მდე:</p>
+<div class="text"><p >შეიყვანეთ მნიშვნელობა</p><p>1-დან 100-მდე:</p></div>
 <div class="input-config">
 <input type="text" id="userGuess">
 <button onclick="checkGuess()" >შემოწმება</button>
 </div>
 <p id="result"></p>
-<p>მცდელობა: <span id="attempts">5</span></p>
+<p>მცდელობა: <span id="attempts">10</span></p>
 <p>ქულა: <span id="score">0</span></p>
 <button onclick="restartGame()">თავიდან დაწყება</button>
 </section>

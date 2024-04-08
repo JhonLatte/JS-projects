@@ -1,63 +1,82 @@
-@media screen and (max-width: 600px){
-    .calculator {
-        width: 300px;
-    }
-    .GuessTheNumber button{
-        padding: 10px 20px;
-    }
-
-
-    .GuessTheNumber h1 {
-        font-size: 35px;
-      }
-
-    .GuessTheNumber input[type="text"] {
-        font-size: 20px;
-      }
-
-      .GuessTheNumber p {
-        font-size: 20px;
-      }
-}
-
-@media screen and (max-width: 440px){
-    .GuessTheNumber h1 {
-        font-size: 25px;
-      }
-
-      .GuessTheNumber p {
-        font-size: 15px;
-      }
-
-    .input-config{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-}
-
-@media screen and (max-width: 380px){
+@media screen and (max-width: 600px) {
   .calculator {
-    width: 200px;
-    height: 45vh;
+    width: 300px;
+  }
+
+  .GuessTheNumber button {
+    padding: 10px 20px;
+  }
+
+
+  .GuessTheNumber h1 {
+    font-size: 35px;
+  }
+
+  .GuessTheNumber input[type="text"] {
+    font-size: 20px;
+  }
+
+  .GuessTheNumber p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .GuessTheNumber h1 {
+    font-size: 25px;
+  }
+
+  
+  .text {
+    font-size: 1px;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
   }
   
-  .calculator .buttons{
+  .text p{
+    margin: 0px 0px;
+  }
+
+  .input-config {
+    margin-top:30px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .calculator {
+    width: 200px;
+    /* height:  auto; */
+  }
+
+  .calculator .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
+  }
+
+  .calculator button {
+    height: 40px;
+    width: 40px;
+    /* padding: 5px; */
+
+  }
+
+  .calculator input[type="text"] {
+    width: 100%;
+    padding: 10px 0px;
+    display: block;
+  }
 }
 
-.calculator button{
-  height: 30px;
-  width: 35px;
-  /* padding: 5px; */
-
+/* @media screen and (max-width: 370px){
+.text{
+  
+  flex-direction: column;
+  margin: 5px;
 }
-.calculator input[type="text"]{
-  width: 100%;
-  padding: 10px 0px;
-  display: block;
-}
-}
+} */

@@ -14,14 +14,13 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // ............................... CALCULATOR ...................................
-
 function addToDisplay(value) {
     document.getElementById("display").value += value;
 }
 
 function deleteLastCharacter() {
-    let displayValue = document.getElementById("display").value;
-    document.getElementById("display").value = displayValue.slice(0, -1);
+    let display = document.getElementById("display");
+    display.value = display.value.slice(0, -1);
 }
 
 function clearDisplay() {
@@ -31,10 +30,41 @@ function clearDisplay() {
 function calculateResult() {
     let expression = document.getElementById("display").value;
     expression = expression.replace("%", "/100");
-    let result = eval(expression);
+    let result = evaluateExpression(expression);
     document.getElementById("display").value = result;
 }
 
+function evaluateExpression(expression) {   
+  
+    let operators = expression.split(/\+|-|\*|\//);
+    let numbers = expression.replace(/[0-9]|\./g, "").split("");
+
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] === "*") {
+            operators[i] = parseFloat(operators[i]) * parseFloat(operators[i + 1]);
+            operators.splice(i + 1, 1);
+            numbers.splice(i, 1);
+            i--;
+        } else if (numbers[i] === "/") {
+            operators[i] = parseFloat(operators[i]) / parseFloat(operators[i + 1]);
+            operators.splice(i + 1, 1);
+            numbers.splice(i, 1);
+            i--;
+        }
+    }
+
+
+    let result = parseFloat(operators[0]);
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] === "+") {
+            result += parseFloat(operators[i + 1]);
+        } else if (numbers[i] === "-") {
+            result -= parseFloat(operators[i + 1]);
+        }
+    }
+
+    return result;
+}
 
 // .......................................................................................
 
@@ -66,7 +96,7 @@ function checkGuess() {
         } else {
             attemptsLeft--;
             attemptsDisplay.textContent = attemptsLeft;
-            result.textContent = userGuess > randomNumber ? "ჩაფიქრებულზე მაღალია!" : "ჩამიქრებულზე დაბალია!";
+            result.textContent = userGuess > randomNumber ? "ჩაფიქრებულზე მაღალია!" : "ჩაფიქრებულზე დაბალია!";
             result.style.color = "red";
             checkLoss();
         }
