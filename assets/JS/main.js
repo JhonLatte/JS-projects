@@ -71,7 +71,7 @@ function evaluateExpression(expression) {
 //.................................. GUESS THE NUMBERA ..............................
 
 
-let attemptsLeft = 5;
+let attemptsLeft = 10;
 let score = 0;
 let randomNumber = generateRandomNumber();
 console.log(randomNumber);
@@ -130,7 +130,7 @@ function checkLoss() {
 
 
 function restartGame() {
-    attemptsLeft = 5;
+    attemptsLeft = 10;
     score = 0;
     document.getElementById("attempts").textContent = attemptsLeft;
     document.getElementById('score').textContent = score;

@@ -153,11 +153,15 @@ nav a:hover {
   }
   
   .GuessTheNumber button:hover {
-    background-color: #0056b3;
+    background-color: #0057b3;
   }
   
- 
+  .GuessTheNumber .resetgame{
+    background-color: crimson;
+ }
   
- 
+ .GuessTheNumber .resetgame:hover{
+    background-color: rgba(203, 16, 53, 0.719);
+ }
   
  
