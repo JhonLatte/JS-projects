@@ -1,0 +1,147 @@
+body {
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* nav */
+
+nav {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 30px;
+   margin-left: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+    padding: 10px 20px;
+    background-color: #fff; 
+    border-radius: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+
+
+
+/* ..................................... CALCULATOR ............................. */
+#cal{
+    padding-top: 10px;
+}
+.calculator {
+    width: 300px;
+    margin: 150px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.calculator input[type="text"] {
+    width: calc(100% - 40px);
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+}
+
+.calculator button {
+    width: calc(24% - 10px);
+    height: 50px;
+    margin: 5px;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.calculator button:hover {
+    background-color: #e0e0e0;
+}
+
+.calculator button.operator {
+    background-color: #ff8c00;
+    color: #fff;
+}
+
+.calculator button.operator:hover {
+    background-color: #ff7f00;
+}
+
+/* ......................... GUESS THE NUMBER ......................... */
+
+
+.GuessTheNumber {
+    text-align: center;
+    background-color: #2f2e2e;
+    color: #fff;
+    padding: 20vh 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.GuessTheNumber h1 {
+    font-size: 45px;
+    padding-top: 15vh;
+
+  }
+  
+  .GuessTheNumber p {
+    font-size: 25px;
+  }
+  
+  .GuessTheNumber input[type="text"] {
+    padding: 8px;
+    font-size: 26px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .input-config{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .GuessTheNumber button {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    padding: 16px 60px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .GuessTheNumber button:hover {
+    background-color: #0056b3;
+  }
+  
+ 
+  
+ 
+  
+ 

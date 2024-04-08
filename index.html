@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body >
+
+    <nav>
+        <ul>
+            <a href="#cal"> <li>Калькулятор</li></a>
+            <a href="#finum"><li>Угадай число</li></a>
+        </ul>
+    </nav>
+
+<!-- ......................... CALCULATOR ......................... -->
+<section id="cal">
+    <div class="calculator" >
+        <input type="text" id="display" disabled>
+        <button class="operator" onclick="clearDisplay()">AC</button>
+        <button class="operator" onclick="addToDisplay('%')">%</button>
+        <button class="operator" onclick="deleteLastCharacter()">←</button>
+        <button class="operator" onclick="addToDisplay('/')">/</button>
+        <button onclick="addToDisplay('7')">7</button>
+        <button onclick="addToDisplay('8')">8</button>
+        <button onclick="addToDisplay('9')">9</button>
+        <button class="operator" onclick="addToDisplay('*')">x</button>
+        <button onclick="addToDisplay('6')">6</button>
+        <button onclick="addToDisplay('5')">5</button>
+        <button onclick="addToDisplay('4')">4</button>
+        <button class="operator" onclick="addToDisplay('-')">-</button>
+        <button onclick="addToDisplay('1')">1</button>
+        <button onclick="addToDisplay('2')">2</button>
+        <button onclick="addToDisplay('3')">3</button>
+        <button class="operator" onclick="addToDisplay('+')">+</button>
+        <button onclick="addToDisplay('00')">00</button>
+        <button onclick="addToDisplay('0')">0</button>
+        <button onclick="addToDisplay('.')">.</button>
+        <button class="operator" onclick="calculateResult()">=</button>
+        <br>
+        <br>
+        <br>
+    </div>
+</section>
+    <!-- ....................................... -->
+
+
+
+<!-- ......................... GUESS THE NUMBER ......................... -->
+
+<section class="GuessTheNumber" >
+<h1 id="finum">გამოიცანი რიცხვი</h1>
+<p >შეიყვანეთ მნიშვნელობა 1-დან 100-მდე:</p>
+<div class="input-config">
+<input type="text" id="userGuess">
+<button onclick="checkGuess()" >შემოწმება</button>
+</div>
+<p id="result"></p>
+<p>მცდელობა: <span id="attempts">5</span></p>
+<p>ქულა: <span id="score">0</span></p>
+<button onclick="restartGame()">თავიდან დაწყება</button>
+</section>
+
+<!-- .................................. -->
+
+
+<!-- ...........................  ......................................... -->
+
+    <script src="./main.js"></script>
+</body>
+</html>
