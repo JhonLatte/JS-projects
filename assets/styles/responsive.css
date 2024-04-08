@@ -1,0 +1,63 @@
+@media screen and (max-width: 600px){
+    .calculator {
+        width: 300px;
+    }
+    .GuessTheNumber button{
+        padding: 10px 20px;
+    }
+
+
+    .GuessTheNumber h1 {
+        font-size: 35px;
+      }
+
+    .GuessTheNumber input[type="text"] {
+        font-size: 20px;
+      }
+
+      .GuessTheNumber p {
+        font-size: 20px;
+      }
+}
+
+@media screen and (max-width: 440px){
+    .GuessTheNumber h1 {
+        font-size: 25px;
+      }
+
+      .GuessTheNumber p {
+        font-size: 15px;
+      }
+
+    .input-config{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 380px){
+  .calculator {
+    width: 200px;
+    height: 45vh;
+  }
+  
+  .calculator .buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+.calculator button{
+  height: 30px;
+  width: 35px;
+  /* padding: 5px; */
+
+}
+.calculator input[type="text"]{
+  width: 100%;
+  padding: 10px 0px;
+  display: block;
+}
+}

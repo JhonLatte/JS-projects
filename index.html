@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="./assets/styles/responsive.css">
 </head>
 <body >
 
     <nav>
         <ul>
-            <a href="#cal"> <li>Калькулятор</li></a>
-            <a href="#finum"><li>Угадай число</li></a>
+            <a href="#cal"> <li>Calculator</li></a>
+            <a href="#finum"><li>FTN</li></a>
         </ul>
     </nav>
+    
 
 <!-- ......................... CALCULATOR ......................... -->
 <section id="cal">
     <div class="calculator" >
         <input type="text" id="display" disabled>
+        <div class="buttons">
         <button class="operator" onclick="clearDisplay()">AC</button>
         <button class="operator" onclick="addToDisplay('%')">%</button>
         <button class="operator" onclick="deleteLastCharacter()">←</button>
@@ -39,9 +42,8 @@
         <button onclick="addToDisplay('0')">0</button>
         <button onclick="addToDisplay('.')">.</button>
         <button class="operator" onclick="calculateResult()">=</button>
-        <br>
-        <br>
-        <br>
+    </div>
+       
     </div>
 </section>
     <!-- ....................................... -->
@@ -68,6 +70,6 @@
 
 <!-- ...........................  ......................................... -->
 
-    <script src="./main.js"></script>
+    <script src="./assets/JS/main.js"></script>
 </body>
 </html>
