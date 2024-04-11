@@ -73,10 +73,26 @@
   }
 }
 
-/* @media screen and (max-width: 370px){
-.text{
-  
-  flex-direction: column;
-  margin: 5px;
+@media screen and (max-width: 380px){
+  .rps-game div{
+    font-size: 18px;
+  }
+
+  #rpsPlay{
+    width: 30vh;
 }
-} */
+
+nav li {
+  /* margin-right: 10px; */
+  padding: 5px 10px;
+  font-size: 20px;
+}
+
+}
+
+@media screen and (max-width: 340px){
+  nav li {
+  padding: 5px 3.5px;
+font-size: 16px;
+  }  
+}

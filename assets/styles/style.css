@@ -9,14 +9,20 @@ body {
 
 } */
 
-/* nav */
+/* ......... navigation ............... */
+
+.navigation{
+    margin: 30px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
 
 nav {
     display: flex;
     justify-content: center;
     position: fixed;
-    top: 30px;
-   margin-left: 20px;
+    margin: 25px;
 }
 
 nav ul {
@@ -54,7 +60,7 @@ nav a:hover {
 .calculator {
     width: 300px;
     /* height: 80vh; */
-    margin: 150px auto;
+    margin: 25vh auto;
     height: auto;
     padding: 40px 20px;
     background-color: #fff;
@@ -105,8 +111,8 @@ nav a:hover {
     text-align: center;
     background-color: #2f2e2e;
     color: #fff;
-    padding: 20vh 0px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 25vh 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;    
 }
 
 .GuessTheNumber h1 {
@@ -154,6 +160,7 @@ nav a:hover {
   
   .GuessTheNumber .resetgame{
     background-color: crimson;
+    margin-bottom: 15vh;
  }
   
  .GuessTheNumber .resetgame:hover{
@@ -172,4 +179,89 @@ cursor: not-allowed;
 
 #continueButton{
    margin-top: 15px;
+}
+
+/* ...................................... ROCK - PAPER - SCISSORS ....................................*/
+
+#RPSsection{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;    
+
+    background-color: burlywood;
+ padding: 35vh 0px;
+}
+
+.rps-game-header {
+    padding-top: 15vh;
+    text-align: center;
+    color: #333;  
+    font-size: 50px;  
+}
+
+.rps-game-container {
+    text-align: center;
+    margin-top: 50px;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.rps-game div{
+    font-size: 25px;
+    text-align: center;
+}
+
+#rpsPlay{
+    width: 40vh;
+}
+
+.rps-game-button {
+    background-color: darkkhaki;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.rpsReset{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.rps-game-reset {
+    font-size: 20px;
+    width: 60vh auto;
+    background-color: crimson;
+    color: #fff; 
+}
+
+.rps-game-reset:hover{
+    background-color: rgba(203, 16, 53, 0.886);
+}
+
+
+.rps-game-button:hover {
+    opacity: 0.8;
+}
+
+.rps-game-button.selected {
+    background-color: #90ee90;
+}
+
+.game-ended:hover {
+    cursor: not-allowed;
+    background-color: #ccc;
+   
+}
+
+
+.game-ended {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
 }

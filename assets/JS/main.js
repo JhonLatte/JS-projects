@@ -33,7 +33,7 @@ function calculateResult() {
     let expression = document.getElementById("display").value;
     expression = expression.replace("%", "/100");
     let result = evaluateExpression(expression);
-    if (!isNaN(result) && isFinite(result)) { 
+    if (!isNaN(result) && isFinite(result)) {
         document.getElementById("display").value = result;
     } else {
         document.getElementById("display").value = "Error";
@@ -77,8 +77,6 @@ function evaluateExpression(expression) {
 // .......................................................................................
 
 //.................................. GUESS THE NUMBERA ..............................
-
-
 let attemptsLeft = 6;
 let score = 0;
 let randomNumber = generateRandomNumber();
@@ -156,4 +154,90 @@ function checkLoss() {
 }
 
 // -----------------------------------------------------------------------------
+
+// -----------------------------ROCK, PAPER, SCISSORS -----------------
+let rpsAttempts = 5;
+let rpsScore = 0;
+let rpsSelectedButton = null;
+
+const rpsButtons = document.querySelectorAll('.rps-game-button:not(#rpsPlay):not(#rpsReset)');
+rpsButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        if (rpsSelectedButton) {
+            rpsSelectedButton.classList.remove('selected');
+        }
+        rpsSelectedButton = button;
+        rpsSelectedButton.classList.add('selected');
+    });
+});
+
+document.getElementById("rpsPlay").addEventListener("click", rpsPlayGame);
+document.getElementById("rpsReset").addEventListener("click", rpsResetGame);
+
+document.getElementById("rpsPlay").classList.remove("game-ended");
+
+function rpsGetComputerChoice() {
+    const choices = ["ქვა", "მაკრატელი", "ქაღალდი"];
+    const randomIndex = Math.floor(Math.random() * choices.length);
+    return choices[randomIndex];
+}
+
+
+function rpsPlayGame() {
+    if (rpsAttempts <= 0) {
+        document.getElementById("rpsResult").textContent = `თამაში დამთავრებულია, დაიწყეთ თამაში თავიდან! დაგროვებული ქულა: ${rpsScore}`;
+        return;
+    }
+
+    if (!rpsSelectedButton) {
+        document.getElementById("rpsResult").textContent = "ჯერ აირჩიეთ ქვა, ქაღალდი ან მაკრატელი!";
+        return;
+    }
+
+    const userChoice = rpsSelectedButton.textContent.toLowerCase();
+    const computerChoice = rpsGetComputerChoice().toLowerCase();
+
+    let result;
+    if (userChoice === computerChoice) {
+        result = "არავისია!";
+        document.getElementById("rpsResult").style.color = "orangered";
+    } else if ((userChoice === "ქვა" && computerChoice === "მაკრატელი") ||
+        (userChoice === "მაკრატელი" && computerChoice === "ქაღალდი") ||
+        (userChoice === "ქაღალდი" && computerChoice === "ქვა")) {
+        result = "თქვენ მოიგეთ ეს ხელი!";
+        rpsScore++;
+        document.getElementById("rpsScore").textContent = rpsScore;
+        document.getElementById("rpsResult").style.color = "green";
+    } else {
+        result = "თქვენ წააგეთ ეს ხელი!";
+        rpsAttempts--;
+        document.getElementById("rpsAttempts").textContent = rpsAttempts;
+        document.getElementById("rpsResult").style.color = "red";
+    }
+
+    document.getElementById("rpsResult").textContent = result;
+
+    if (rpsAttempts === 0) {
+        document.getElementById("rpsResult").textContent = `თქვენ წააგეთ და დააგროვეთ ${rpsScore} ქულა, სცადეთ კიდევ ერთხელ.`;
+        document.getElementById("rpsPlay").classList.add("game-ended");
+        return;
+    }
+
+}
+
+function rpsResetGame() {
+    rpsAttempts = 5;
+    rpsScore = 0;
+    document.getElementById("rpsAttempts").textContent = rpsAttempts;
+    document.getElementById("rpsScore").textContent = rpsScore;
+    document.getElementById("rpsResult").textContent = "";
+    document.getElementById("rpsResult").style.color = "";
+    document.getElementById("rpsPlay").classList.remove("game-ended");
+    
+
+    if (rpsSelectedButton) {
+        rpsSelectedButton.classList.remove("selected");
+        rpsSelectedButton = null;
+    }
+}
 

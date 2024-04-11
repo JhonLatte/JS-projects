@@ -26,7 +26,7 @@
 </head>
 
 <body>
-
+<section class="navigation">
     <nav>
         <ul>
             <a href="#cal">
@@ -35,9 +35,12 @@
             <a href="#finum">
                 <li>FTN</li>
             </a>
+            <a href="#RPS">
+                <li>RPS</li>
+            </a>
         </ul>
     </nav>
-
+</section>
 
     <!-- ......................... CALCULATOR .........................-->
     <section id="cal">
@@ -92,8 +95,32 @@
         <button class="resetgame" onclick="restartGame()">თავიდან დაწყება</button>
     </section>
     <!-- .................................. -->
-
-
+   
+    <section id="RPSsection" class="rps-game">
+        <h1 id="RPS" class="rps-game-header">ჯეირანი</h1>
+        <div class="rps-game-container">
+            <div class="RPSchoice">
+            <button id="rock" class="rps-game-button">ქვა</button>
+            <button id="scissors" class="rps-game-button">მაკრატელი</button>
+            <button id="paper" class="rps-game-button">ქაღალდი</button>
+            </div>
+            <div class="RPSconfig">
+            <button id="rpsPlay" class="rps-game-button">გათამაშება</button>
+            </div>
+        </div>
+        <div>
+            <b>
+                <p class="rps-result" id="rpsResult"></p>
+            </b>
+            <p>მცდელობა: <span id="rpsAttempts">5</span></p>
+            <p>ქულა: <span id="rpsScore">0</span></p>
+        </div>
+        <div class="rpsReset">
+        <button id="rpsReset" class="rps-game-button rps-game-reset">თავიდან დაწყება</button>
+    </div>
+    </div>
+    </section>
+    
     <!-- ...........................  ......................................... -->
 
     <script src="./assets/JS/main.js"></script>
