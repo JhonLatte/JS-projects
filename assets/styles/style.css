@@ -123,11 +123,7 @@ nav a:hover {
     justify-content: center;
     align-items: center;
   }
-  
-  /* .GuessTheNumber p {
-    font-size: 25px;
-  } */
-  
+
   .GuessTheNumber input[type="text"] {
     padding: 8px;
     font-size: 26px;
@@ -163,5 +159,17 @@ nav a:hover {
  .GuessTheNumber .resetgame:hover{
     background-color: rgba(203, 16, 53, 0.719);
  }
-  
- 
+
+ .GuessTheNumber button:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.input-config input:disabled{
+cursor: not-allowed;
+}
+
+#continueButton{
+   margin-top: 15px;
+}

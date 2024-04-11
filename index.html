@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,79 +14,90 @@
     <meta property="og:description" content="projects website">
     <meta property="og:image"
         content="https://cdn-images.threadless.com/threadless-media/artist_shops/shops/techmasters/products/601471/shirt-1528585184-26927ce1a12d99a4def37673630af819.png?v=3&d=eyJvbmx5X21ldGEiOiBmYWxzZSwgImZvcmNlIjogZmFsc2UsICJvcHMiOiBbWyJ0cmltIiwgW2ZhbHNlLCBmYWxzZV0sIHt9XSwgWyJyZXNpemUiLCBbXSwgeyJ3aWR0aCI6IDk5Ni4wLCAiYWxsb3dfdXAiOiBmYWxzZSwgImhlaWdodCI6IDk5Ni4wfV0sIFsiY2FudmFzX2NlbnRlcmVkIiwgWzEyMDAsIDEyMDBdLCB7ImJhY2tncm91bmQiOiAiMzUzODQ3In1dLCBbInJlc2l6ZSIsIFsyMDAwXSwge31dLCBbImNhbnZhc19jZW50ZXJlZCIsIFsyMDAwLCAyMDAwLCAiI2ZmZmZmZiJdLCB7fV0sIFsiZW5jb2RlIiwgWyJqcGciLCA4NV0sIHt9XV19">
-        <meta property="twitter:card" content="summary_large_image">
-        <meta property="twitter:type" content="website">
-        <meta property="twitter:title" content="JS-projects by JhonLatte">
-        <meta property="twitter:description" content="projects website">
-        <meta property="twitter:image"
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:type" content="website">
+    <meta property="twitter:title" content="JS-projects by JhonLatte">
+    <meta property="twitter:description" content="projects website">
+    <meta property="twitter:image"
         content="https://cdn-images.threadless.com/threadless-media/artist_shops/shops/techmasters/products/601471/shirt-1528585184-26927ce1a12d99a4def37673630af819.png?v=3&d=eyJvbmx5X21ldGEiOiBmYWxzZSwgImZvcmNlIjogZmFsc2UsICJvcHMiOiBbWyJ0cmltIiwgW2ZhbHNlLCBmYWxzZV0sIHt9XSwgWyJyZXNpemUiLCBbXSwgeyJ3aWR0aCI6IDk5Ni4wLCAiYWxsb3dfdXAiOiBmYWxzZSwgImhlaWdodCI6IDk5Ni4wfV0sIFsiY2FudmFzX2NlbnRlcmVkIiwgWzEyMDAsIDEyMDBdLCB7ImJhY2tncm91bmQiOiAiMzUzODQ3In1dLCBbInJlc2l6ZSIsIFsyMDAwXSwge31dLCBbImNhbnZhc19jZW50ZXJlZCIsIFsyMDAwLCAyMDAwLCAiI2ZmZmZmZiJdLCB7fV0sIFsiZW5jb2RlIiwgWyJqcGciLCA4NV0sIHt9XV19">
-        <link rel="shortcut icon" href="./assets/images/html-css-js.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/images/html-css-js.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/styles/style.css">
     <link rel="stylesheet" href="./assets/styles/responsive.css">
 </head>
-<body >
+
+<body>
 
     <nav>
         <ul>
-            <a href="#cal"> <li>Calculator</li></a>
-            <a href="#finum"><li>FTN</li></a>
+            <a href="#cal">
+                <li>Calculator</li>
+            </a>
+            <a href="#finum">
+                <li>FTN</li>
+            </a>
         </ul>
     </nav>
-    
 
-<!-- ......................... CALCULATOR ......................... -->
-<section id="cal">
-    <div class="calculator" >
-        <input type="text" id="display" disabled>
-        <div class="buttons">
-        <button class="operator" onclick="clearDisplay()">AC</button>
-        <button class="operator" onclick="addToDisplay('%')">%</button>
-        <button class="operator" onclick="deleteLastCharacter()">←</button>
-        <button class="operator" onclick="addToDisplay('/')">/</button>
-        <button onclick="addToDisplay('7')">7</button>
-        <button onclick="addToDisplay('8')">8</button>
-        <button onclick="addToDisplay('9')">9</button>
-        <button class="operator" onclick="addToDisplay('*')">x</button>
-        <button onclick="addToDisplay('6')">6</button>
-        <button onclick="addToDisplay('5')">5</button>
-        <button onclick="addToDisplay('4')">4</button>
-        <button class="operator" onclick="addToDisplay('-')">-</button>
-        <button onclick="addToDisplay('1')">1</button>
-        <button onclick="addToDisplay('2')">2</button>
-        <button onclick="addToDisplay('3')">3</button>
-        <button class="operator" onclick="addToDisplay('+')">+</button>
-        <button onclick="addToDisplay('00')">00</button>
-        <button onclick="addToDisplay('0')">0</button>
-        <button onclick="addToDisplay('.')">.</button>
-        <button class="operator" onclick="calculateResult()">=</button>
-    </div>
-       
-    </div>
-</section>
+
+    <!-- ......................... CALCULATOR .........................-->
+    <section id="cal">
+        <div class="calculator">
+            <input type="text" id="display" disabled>
+            <div class="buttons">
+                <button class="operator" onclick="clearDisplay()">AC</button>
+                <button class="operator" onclick="addToDisplay('%')"><i class="fa-solid fa-percent"></i></button>
+                <button class="operator" onclick="deleteLastCharacter()"><i class="fa-solid fa-delete-left"></i></button>
+                <button class="operator" onclick="addToDisplay('/')"><i class="fa-solid fa-divide"></i></button>
+                <button onclick="addToDisplay('7')">7</button>
+                <button onclick="addToDisplay('8')">8</button>
+                <button onclick="addToDisplay('9')">9</button>
+                <button class="operator" onclick="addToDisplay('*')"><i class="fa-solid fa-xmark"></i></button>
+                <button onclick="addToDisplay('6')">6</button>
+                <button onclick="addToDisplay('5')">5</button>
+                <button onclick="addToDisplay('4')">4</button>
+                <button class="operator" onclick="addToDisplay('-')"><i class="fa-solid fa-minus"></i></button>
+                <button onclick="addToDisplay('1')">1</button>
+                <button onclick="addToDisplay('2')">2</button>
+                <button onclick="addToDisplay('3')">3</button>
+                <button class="operator" onclick="addToDisplay('+')"><i class="fa-solid fa-plus"></i></button>
+                <button onclick="addToDisplay('00')">00</button>
+                <button onclick="addToDisplay('0')">0</button>
+                <button onclick="addToDisplay('.')">.</button>
+                <button class="operator" onclick="calculateResult()"><i class="fa-solid fa-equals"></i></button>
+            </div>
+
+        </div>
+    </section>
+
     <!-- ....................................... -->
 
 
 
-<!-- ......................... GUESS THE NUMBER ......................... -->
+    <!-- ......................... GUESS THE NUMBER ......................... -->
 
-<section class="GuessTheNumber" >
-<h1 id="finum">გამოიცანი რიცხვი</h1>
-<div class="text"><p >შეიყვანეთ მნიშვნელობა</p><p>1-დან 100-მდე:</p></div>
-<div class="input-config">
-<input type="text" id="userGuess">
-<button onclick="checkGuess()" >შემოწმება</button>
-</div>
-<p id="result"></p>
-<p>მცდელობა: <span id="attempts">10</span></p>
-<p>ქულა: <span id="score">0</span></p>
-<button class="resetgame" onclick="restartGame()">თავიდან დაწყება</button>
-</section>
+    <section class="GuessTheNumber">
+        <h1 id="finum">გამოიცანი რიცხვი</h1>
+        <div class="text">
+            <p>შეიყვანეთ მნიშვნელობა</p>
+            <p>1-დან 100-მდე:</p>
+        </div>
+        <div class="input-config">
+            <input class="FTHEN" type="text" id="userGuess">
+            <button id="checkButton" onclick="checkGuess()">შემოწმება</button>
+        </div>
+        <p id="result"></p>
+        <button id="continueButton" onclick="continueGame()" style="display: none ;">გაგრძელება</button>
+        <p>მცდელობა: <span id="attempts">6</span></p>
+        <p>ქულა: <span id="score">0</span></p>
+        <button class="resetgame" onclick="restartGame()">თავიდან დაწყება</button>
+    </section>
+    <!-- .................................. -->
 
-<!-- .................................. -->
 
-
-<!-- ...........................  ......................................... -->
+    <!-- ...........................  ......................................... -->
 
     <script src="./assets/JS/main.js"></script>
+    <script src="https://kit.fontawesome.com/cbf53a7ded.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
