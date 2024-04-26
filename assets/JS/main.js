@@ -186,20 +186,25 @@ function rpsGetComputerChoice() {
 function rpsPlayGame() {
     if (rpsAttempts <= 0) {
         document.getElementById("rpsResult").textContent = `თამაში დამთავრებულია, დაიწყეთ თამაში თავიდან! დაგროვებული ქულა: ${rpsScore}`;
+        document.getElementById("rpsResult").style.color = "crimson";
+        
         return;
     }
 
     if (!rpsSelectedButton) {
         document.getElementById("rpsResult").textContent = "ჯერ აირჩიეთ ქვა, ქაღალდი ან მაკრატელი!";
+        document.getElementById("rpsResult").style.color = "crimson";
         return;
     }
 
     const userChoice = rpsSelectedButton.textContent.toLowerCase();
     const computerChoice = rpsGetComputerChoice().toLowerCase();
 
+    document.getElementById("rpsComputerChoice").textContent = computerChoice;
+
     let result;
     if (userChoice === computerChoice) {
-        result = "არავისია!";
+        result = "ყაიმი!";
         document.getElementById("rpsResult").style.color = "orangered";
     } else if ((userChoice === "ქვა" && computerChoice === "მაკრატელი") ||
         (userChoice === "მაკრატელი" && computerChoice === "ქაღალდი") ||
@@ -233,7 +238,7 @@ function rpsResetGame() {
     document.getElementById("rpsResult").textContent = "";
     document.getElementById("rpsResult").style.color = "";
     document.getElementById("rpsPlay").classList.remove("game-ended");
-    
+    document.getElementById("rpsComputerChoice").textContent = "";
 
     if (rpsSelectedButton) {
         rpsSelectedButton.classList.remove("selected");

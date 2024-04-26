@@ -214,7 +214,11 @@ cursor: not-allowed;
 }
 
 #rpsPlay{
-    width: 40vh;
+    width: 100% ;
+}
+
+.rpsPC{
+    color: blueviolet;
 }
 
 .rps-game-button {
