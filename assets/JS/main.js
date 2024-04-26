@@ -31,7 +31,7 @@ function clearDisplay() {
 
 function calculateResult() {
     let expression = document.getElementById("display").value;
-    expression = expression.replace("%", "/100");
+    expression = expression.replace("%", "/100*");
     let result = evaluateExpression(expression);
     if (!isNaN(result) && isFinite(result)) {
         document.getElementById("display").value = result;
