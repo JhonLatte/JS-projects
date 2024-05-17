@@ -38,6 +38,9 @@
             <a href="#RPS">
                 <li>RPS</li>
             </a>
+            <a href="#QR">
+                <li>QR</li>
+            </a>
         </ul>
     </nav>
 </section>
@@ -122,10 +125,20 @@
     </div>
     </section>
     
-    <!-- ...........................  ......................................... -->
+    <!-- ........................... QR ......................................... -->
+
+<section   class="qr-section" >
+    <div id="QR" class="qr-container">
+        <label for="qr-urlInput">შეიყვანეთ ლინკი ან რაიმე ტექსტი:</label>
+        <input type="text" id="qr-urlInput" class="qr-input"/>
+        <button class="qr-button" onclick="generateQRCode()">QR კოდის დაგენერირება</button>
+        <div id="qr-qrcode" class="qr-code"></div>
+    </div>
+    </section>
 
     <script src="./assets/JS/main.js"></script>
     <script src="https://kit.fontawesome.com/cbf53a7ded.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
 </body>
 
 </html>

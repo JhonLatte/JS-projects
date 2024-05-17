@@ -21,6 +21,14 @@
   }
 }
 
+@media screen and (max-width: 470px){
+  nav li {
+    padding: 5px 3.5px;
+  font-size: 16px;
+    }  
+
+}
+
 @media screen and (max-width: 440px) {
   .GuessTheNumber h1 {
     font-size: 25px;
@@ -85,14 +93,43 @@
 nav li {
   /* margin-right: 10px; */
   padding: 5px 10px;
-  font-size: 20px;
+  font-size: 14px;
 }
 
 }
 
-@media screen and (max-width: 340px){
+@media screen and (max-width: 353px){
   nav li {
   padding: 5px 3.5px;
 font-size: 16px;
   }  
+}
+
+@media screen and (max-width: 320px){
+  nav li {
+    /* margin-right: 10px; */
+    padding: 5px 5px;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 302px){
+  .qr-section label{
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 285px){
+  .qr-container {
+    padding: 10px;
+    margin: 20px auto;
+    max-width: 100%;
+    box-shadow: none;
+}
+
+.qr-container label, 
+.qr-container button, 
+.qr-input {
+    font-size: 15px;
+}
 }

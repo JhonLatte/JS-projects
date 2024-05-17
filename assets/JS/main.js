@@ -246,3 +246,17 @@ function rpsResetGame() {
     }
 }
 
+//............................................ QR .....................................
+
+function generateQRCode() {
+    let url = document.getElementById("qr-urlInput").value;
+    let qrCodeContainer = document.getElementById("qr-qrcode");
+    qrCodeContainer.innerHTML = "";
+    new QRCode(qrCodeContainer, {
+        text: url,
+        width: 128,
+        height: 128,
+        colorDark: "#ffffff",
+        colorLight: "#2c2c2c"
+    });
+}
