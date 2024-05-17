@@ -174,20 +174,16 @@ rpsButtons.forEach(button => {
 document.getElementById("rpsPlay").addEventListener("click", rpsPlayGame);
 document.getElementById("rpsReset").addEventListener("click", rpsResetGame);
 
-document.getElementById("rpsPlay").classList.remove("game-ended");
-
 function rpsGetComputerChoice() {
     const choices = ["ქვა", "მაკრატელი", "ქაღალდი"];
     const randomIndex = Math.floor(Math.random() * choices.length);
     return choices[randomIndex];
 }
 
-
 function rpsPlayGame() {
     if (rpsAttempts <= 0) {
         document.getElementById("rpsResult").textContent = `თამაში დამთავრებულია, დაიწყეთ თამაში თავიდან! დაგროვებული ქულა: ${rpsScore}`;
         document.getElementById("rpsResult").style.color = "crimson";
-        
         return;
     }
 
@@ -197,18 +193,20 @@ function rpsPlayGame() {
         return;
     }
 
-    const userChoice = rpsSelectedButton.textContent.toLowerCase();
-    const computerChoice = rpsGetComputerChoice().toLowerCase();
+    const userChoice = rpsSelectedButton.id;
+    const computerChoice = rpsGetComputerChoice();
 
     document.getElementById("rpsComputerChoice").textContent = computerChoice;
 
     let result;
-    if (userChoice === computerChoice) {
+    if (userChoice === "rock" && computerChoice === "ქვა" ||
+        userChoice === "scissors" && computerChoice === "მაკრატელი" ||
+        userChoice === "paper" && computerChoice === "ქაღალდი") {
         result = "ყაიმი!";
         document.getElementById("rpsResult").style.color = "orangered";
-    } else if ((userChoice === "ქვა" && computerChoice === "მაკრატელი") ||
-        (userChoice === "მაკრატელი" && computerChoice === "ქაღალდი") ||
-        (userChoice === "ქაღალდი" && computerChoice === "ქვა")) {
+    } else if ((userChoice === "rock" && computerChoice === "მაკრატელი") ||
+               (userChoice === "scissors" && computerChoice === "ქაღალდი") ||
+               (userChoice === "paper" && computerChoice === "ქვა")) {
         result = "თქვენ მოიგეთ ეს ხელი!";
         rpsScore++;
         document.getElementById("rpsScore").textContent = rpsScore;
@@ -228,6 +226,8 @@ function rpsPlayGame() {
         return;
     }
 
+    console.log(userChoice);
+    console.log(computerChoice);
 }
 
 function rpsResetGame() {
