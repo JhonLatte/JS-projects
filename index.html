@@ -20,30 +20,30 @@
     <meta property="twitter:description" content="projects website">
     <meta property="twitter:image"
         content="https://cdn-images.threadless.com/threadless-media/artist_shops/shops/techmasters/products/601471/shirt-1528585184-26927ce1a12d99a4def37673630af819.png?v=3&d=eyJvbmx5X21ldGEiOiBmYWxzZSwgImZvcmNlIjogZmFsc2UsICJvcHMiOiBbWyJ0cmltIiwgW2ZhbHNlLCBmYWxzZV0sIHt9XSwgWyJyZXNpemUiLCBbXSwgeyJ3aWR0aCI6IDk5Ni4wLCAiYWxsb3dfdXAiOiBmYWxzZSwgImhlaWdodCI6IDk5Ni4wfV0sIFsiY2FudmFzX2NlbnRlcmVkIiwgWzEyMDAsIDEyMDBdLCB7ImJhY2tncm91bmQiOiAiMzUzODQ3In1dLCBbInJlc2l6ZSIsIFsyMDAwXSwge31dLCBbImNhbnZhc19jZW50ZXJlZCIsIFsyMDAwLCAyMDAwLCAiI2ZmZmZmZiJdLCB7fV0sIFsiZW5jb2RlIiwgWyJqcGciLCA4NV0sIHt9XV19">
-    <link rel="shortcut icon" href="./assets/images/html-css-js.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/images/icon.jpg" type="image/x-icon">
     <link rel="stylesheet" href="./assets/styles/style.css">
     <link rel="stylesheet" href="./assets/styles/responsive.css">
 </head>
 
 <body>
-<section class="navigation">
-    <nav>
-        <ul>
-            <a href="#cal">
-                <li>Calculator</li>
-            </a>
-            <a href="#finum">
-                <li>FTN</li>
-            </a>
-            <a href="#RPS">
-                <li>RPS</li>
-            </a>
-            <a href="#QR">
-                <li>QR</li>
-            </a>
-        </ul>
-    </nav>
-</section>
+    <section class="navigation">
+        <nav>
+            <ul>
+                <a href="#cal">
+                    <li>Calculator</li>
+                </a>
+                <a href="#finum">
+                    <li>FTN</li>
+                </a>
+                <a href="#RPS">
+                    <li>RPS</li>
+                </a>
+                <a href="#QR">
+                    <li>QR</li>
+                </a>
+            </ul>
+        </nav>
+    </section>
 
     <!-- ......................... CALCULATOR .........................-->
     <section id="cal">
@@ -52,7 +52,8 @@
             <div class="buttons">
                 <button class="operator" onclick="clearDisplay()">AC</button>
                 <button class="operator" onclick="addToDisplay('%')"><i class="fa-solid fa-percent"></i></button>
-                <button class="operator" onclick="deleteLastCharacter()"><i class="fa-solid fa-delete-left"></i></button>
+                <button class="operator" onclick="deleteLastCharacter()"><i
+                        class="fa-solid fa-delete-left"></i></button>
                 <button class="operator" onclick="addToDisplay('/')"><i class="fa-solid fa-divide"></i></button>
                 <button onclick="addToDisplay('7')">7</button>
                 <button onclick="addToDisplay('8')">8</button>
@@ -98,17 +99,17 @@
         <button class="resetgame" onclick="restartGame()">თავიდან დაწყება</button>
     </section>
     <!-- ............... ROCK, PAPER, SCISSORS ................... -->
-   
+
     <section id="RPSsection" class="rps-game">
         <h1 id="RPS" class="rps-game-header">ჯეირანი</h1>
         <div class="rps-game-container">
             <div class="RPSchoice">
-            <button id="rock" class="rps-game-button">ქვა</button>
-            <button id="scissors" class="rps-game-button">მაკრატელი</button>
-            <button id="paper" class="rps-game-button">ქაღალდი</button>
+                <button id="rock" class="rps-game-button">ქვა</button>
+                <button id="scissors" class="rps-game-button">მაკრატელი</button>
+                <button id="paper" class="rps-game-button">ქაღალდი</button>
             </div>
             <div class="RPSconfig">
-            <button id="rpsPlay" class="rps-game-button">გათამაშება</button>
+                <button id="rpsPlay" class="rps-game-button">გათამაშება</button>
             </div>
         </div>
         <div>
@@ -120,20 +121,20 @@
             <p>ქულა: <span id="rpsScore">0</span></p>
         </div>
         <div class="rpsReset">
-        <button id="rpsReset" class="rps-game-button rps-game-reset">თავიდან დაწყება</button>
-    </div>
-    </div>
+            <button id="rpsReset" class="rps-game-button rps-game-reset">თავიდან დაწყება</button>
+        </div>
+        </div>
     </section>
-    
+
     <!-- ........................... QR ......................................... -->
 
-<section   class="qr-section" >
-    <div id="QR" class="qr-container">
-        <label for="qr-urlInput">შეიყვანეთ ლინკი ან რაიმე ტექსტი:</label>
-        <input type="text" id="qr-urlInput" class="qr-input"/>
-        <button class="qr-button" onclick="generateQRCode()">QR კოდის დაგენერირება</button>
-        <div id="qr-qrcode" class="qr-code"></div>
-    </div>
+    <section class="qr-section">
+        <div id="QR" class="qr-container">
+            <label for="qr-urlInput">შეიყვანეთ ლინკი ან რაიმე ტექსტი:</label>
+            <input type="text" id="qr-urlInput" class="qr-input" />
+            <button class="qr-button" onclick="generateQRCode()">QR კოდის დაგენერირება</button>
+            <div id="qr-qrcode" class="qr-code"></div>
+        </div>
     </section>
 
     <script src="./assets/JS/main.js"></script>
