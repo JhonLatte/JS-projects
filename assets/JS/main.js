@@ -15,34 +15,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // ............................... CALCULATOR ...................................
 function addToDisplay(value) {
-    document.getElementById("display").value += value;
+    let display = document.getElementById("display");
+    if (display.value !== "Error") {
+        display.value += value;
+    }
 }
 
 function deleteLastCharacter() {
     let display = document.getElementById("display");
-    display.value = display.value.slice(0, -1);
+    if (display.value !== "Error") {
+        display.value = display.value.slice(0, -1);
+    }
 }
 
 function clearDisplay() {
     document.getElementById("display").value = "";
 }
 
-
-
 function calculateResult() {
-    let expression = document.getElementById("display").value;
+    let display = document.getElementById("display");
+    let expression = display.value;
     expression = expression.replace("%", "/100*");
     let result = evaluateExpression(expression);
     if (!isNaN(result) && isFinite(result)) {
-        document.getElementById("display").value = result;
+        display.value = result;
     } else {
-        document.getElementById("display").value = "Error";
+        display.value = "Error";
     }
 }
 
-
 function evaluateExpression(expression) {
-
     let operators = expression.split(/\+|-|\*|\//);
     let numbers = expression.replace(/[0-9]|\./g, "").split("");
 
@@ -59,7 +61,6 @@ function evaluateExpression(expression) {
             i--;
         }
     }
-
 
     let result = parseFloat(operators[0]);
     for (let i = 0; i < numbers.length; i++) {
